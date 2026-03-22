@@ -1,3 +1,5 @@
+#!/usr/bin/env lua
+
 local args = {...}
 
 local command = args[1]
@@ -35,3 +37,13 @@ if command == "create" then
 else
   print("Command not found, run extify help for more info")
 end
+
+for i = 1, 100, 2 do
+  io.write("\rDownloading... " .. i .. "%")
+  io.flush()
+
+  -- fake delay
+  os.execute("sleep 0.05")
+end
+
+print("\nDone.")
