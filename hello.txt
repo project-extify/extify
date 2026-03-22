@@ -1,3 +1,0 @@
-Name: Myext
-Description: This is a good extension
-Version: v1.0.01

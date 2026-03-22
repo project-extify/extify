@@ -10,21 +10,24 @@ local function createNewFile()
   local desc = io.read()
   io.write("Enter your project version: ")
   local version = io.read()
+  
+  local json = string.format([[
+{
+  "name" : "%s",
+  "description" : "%s",
+  "version" : "%s"
+}
+    ]], name, desc, version)
 
-  return {
-    name = name,
-    description = desc,
-    version = version,
-  }
+  return json
 end
 
+
 if command == "create" then
-  local file = io.open("hello.txt","a")
+  local file = io.open("package.json","w")
     if file ~= nil then
       local data = createNewFile()
-      file:write("Name: " .. data.name)
-      file:write("\nDescription: " .. data.description)
-      file:write("\nVersion: " .. data.version)
+      file:write(data)
       file:close()
     else
       print("Could not open the file")
