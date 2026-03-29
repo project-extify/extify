@@ -1,0 +1,22 @@
+{
+  "name": "extify",
+  "version": "0.1.0",
+  "description": "Blazingly fast browser extension framework",
+  "homepage": "https://github.com/sudoscrawl/extify#readme",
+  "bugs": {
+    "url": "https://github.com/sudoscrawl/extify/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudoscrawl/extify.git"
+  },
+  "license": "MIT",
+  "author": "Ayush",
+  "scripts": {
+    "prettier": "prettier"
+  },
+  "devDependencies": {
+    "@prettier/plugin-lua": "^0.0.3",
+    "prettier": "^3.8.1"
+  }
+}
